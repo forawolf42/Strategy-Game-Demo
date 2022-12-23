@@ -8,6 +8,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519260842408ff993819e8afdf318000/e2/b843f78c/Physics.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/f9/e2cfe2a2/Gizmos.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/ff/17a15bd0/Transform.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -59,6 +61,10 @@
       <option name="presentableId" value="Default" />
       <updated>1671469017664</updated>
       <workItem from="1671469039340" duration="8864000" />
+      <workItem from="1671650526726" duration="1081000" />
+      <workItem from="1671745902867" duration="1087000" />
+      <workItem from="1671787149500" duration="9476000" />
+      <workItem from="1671807023672" duration="10912000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,6 @@ public class GridManager : MonoBehaviour
    [SerializeField] private  int _width;
    [SerializeField] private  int _height;
    [SerializeField] private  TileManager _tileprefab;
-   [SerializeField] private  Transform _camera;
 
    private void Start()
    {
@@ -27,7 +26,5 @@ public class GridManager : MonoBehaviour
             spawnedTile.Init(isOffset);
          }
       }
-
-      _camera.transform.position = new Vector3((float) _width / 2 - 0.5f, (float) _height / 2 - 0.5f,-10);
    }
 }
