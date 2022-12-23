@@ -48,7 +48,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">In-game Images</a>
+      <a href="#in-game-images">In-game Images</a>
     </li>
     <li>
       <a href="#getting-started">In-game Algorithms</a>
