@@ -29,8 +29,9 @@ public class Pathfinding : MonoBehaviour
 
     IEnumerator GoThePositionenum()
     {
-        var targetPos = target.position;
-        foreach (var VARIABLE in FindPath(seeker.position, targetPos))
+        var targetPos = target;
+        var seekerPos = seeker;
+        foreach (var VARIABLE in FindPath(seekerPos.position,new Vector3( targetPos.position.x+1, targetPos.position.y ,targetPos.position.z)))
         {
             var obj = VARIABLE.worldPosition;
             obj.z = -1;
@@ -39,7 +40,7 @@ public class Pathfinding : MonoBehaviour
 
             for (int i = 0; i < 10; i++)
             {
-                seeker.position = Vector3.Lerp(seeker.position, obj, 1f / 10f * i);
+                seekerPos.position = Vector3.Lerp(seekerPos.position, obj, 1f / 10f * i);
                 yield return new WaitForSeconds(Time.fixedDeltaTime);
             }
         }
