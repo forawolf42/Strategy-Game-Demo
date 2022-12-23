@@ -48,12 +48,20 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+     <li>
+      <a href="#built-with">Built With</a>
+    </li>
+     <li>
       <a href="#in-game-images">In-game Images</a>
     </li>
     <li>
-      <a href="#getting-started">In-game Algorithms</a>
+      <a href="#in-game-algorithms">In-game Algorithms</a>
     </li>
-    <li><a href="#usage">In-Game Code Design</a></li>
+    <li><a href="#drawcall">Drawcall</a></li>
+    <li><a href="#design">Design</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
