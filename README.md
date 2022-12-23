@@ -33,6 +33,7 @@
   <p align="center">
    a strategy game demo!
     <br />
+    <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Download playable demo»</strong></a>
     <br />
     <br />
