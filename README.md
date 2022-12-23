@@ -24,14 +24,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://www.linkedin.com/in/furkan-nebio%C4%9Flu-257b411b7/">
+    <img src="https://i.ibb.co/CHcCRtB/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Strategy Game Demo</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+   a strategy game demo!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
