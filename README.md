@@ -72,9 +72,9 @@ This game demo is a reference project.
 
 I used this applications/frameworks while making the game
 
-* [![Unity][Next.js]][Next-url]
-* [![Rider][React.js]][React-url]
-* [![Github][Vue.js]][Vue-url]
+* [![Unity][Unity]][Next-url]
+* [![Rider][Rider]][React-url]
+* [![Github][Github]][Vue-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
