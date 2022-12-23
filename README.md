@@ -72,9 +72,9 @@ This game demo is a reference project.
 
 I used this applications/frameworks while making the game
 
-* [![https://img.shields.io/badge/UNITY-%20-blue][https://img.shields.io/badge/UNITY-%20-blue]][]
-* [![https://img.shields.io/badge/RIDER-%20-orange][https://img.shields.io/badge/RIDER-%20-orange]][]
-* [![https://img.shields.io/badge/GITHUB-%20-green][https://img.shields.io/badge/GITHUB-%20-green]][]
+* https://img.shields.io/badge/UNITY-%20-blue
+* https://img.shields.io/badge/RIDER-%20-orange
+* https://img.shields.io/badge/GITHUB-%20-green
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
