@@ -80,10 +80,7 @@ I used this applications/frameworks while making the game
 
 # In-Game Images
 
-![Animation2](https://user-images.githubusercontent.com/76211809/209403826-8f1589e6-a14d-4eec-b321-b3b2201f290d.gif)
-![Animation3](https://user-images.githubusercontent.com/76211809/209403876-835cf0f0-f80d-4ad5-afe7-35979bb0643d.gif)
-![Animation4](https://user-images.githubusercontent.com/76211809/209404020-8e1fb426-8aed-4d3b-9daa-780337763f2b.gif)
-![Animation5](https://user-images.githubusercontent.com/76211809/209404064-687a19e3-ec84-4981-b075-705721b8d02b.gif)
+<img src="https://user-images.githubusercontent.com/76211809/209403826-8f1589e6-a14d-4eec-b321-b3b2201f290d.gif" width="90%"></img> <img src="https://user-images.githubusercontent.com/76211809/209403876-835cf0f0-f80d-4ad5-afe7-35979bb0643d.gif" width="90%"></img> <img src="https://user-images.githubusercontent.com/76211809/209404020-8e1fb426-8aed-4d3b-9daa-780337763f2b.gif" width="90%"></img> <img src="https://user-images.githubusercontent.com/76211809/209404064-687a19e3-ec84-4981-b075-705721b8d02b.gif" width="90%"></img> 
 
 
 <!-- GETTING STARTED -->
