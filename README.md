@@ -80,7 +80,6 @@ I used this applications/frameworks while making the game
 
 ### In-Game Images
 
-![Animation1](https://user-images.githubusercontent.com/76211809/209403750-0a1b2351-62f7-4ab1-899f-ab828eccfc0b.gif)
 ![Animation2](https://user-images.githubusercontent.com/76211809/209403826-8f1589e6-a14d-4eec-b321-b3b2201f290d.gif)
 ![Animation3](https://user-images.githubusercontent.com/76211809/209403876-835cf0f0-f80d-4ad5-afe7-35979bb0643d.gif)
 ![Animation4](https://user-images.githubusercontent.com/76211809/209404020-8e1fb426-8aed-4d3b-9daa-780337763f2b.gif)
@@ -96,10 +95,9 @@ A* Pathfinding is an algorithm used to efficiently find a path from a starting p
 ![Animation6](https://user-images.githubusercontent.com/76211809/209404291-aa88aa04-769a-4c9e-837f-64ccd64158d6.gif)
 
 
-### In-Game Code Design
 ## Draw Call
+![Animation2](https://user-images.githubusercontent.com/76211809/209405097-4cd5f4f9-dc03-4d04-bad5-50749c642bdd.gif)
 
-![Animation7](https://user-images.githubusercontent.com/76211809/209404546-9500a690-f922-48ad-8831-9458bd432cdc.gif)
 
 ## DESIGN
 *Polymorphism
