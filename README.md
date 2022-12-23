@@ -127,3 +127,5 @@ Project Link: [https://github.com/forawolf42/Strategy-Game-Demo](https://github.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
