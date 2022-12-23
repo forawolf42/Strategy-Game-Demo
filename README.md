@@ -72,9 +72,9 @@ This game demo is a reference project.
 
 I used this applications/frameworks while making the game
 
-* [![Unity][Unity]][Next-url]
-* [![Rider][Rider]][React-url]
-* [![Github][Github]][Vue-url]
+* [![Unity][https://img.shields.io/badge/UNITY-%20-blue]][]
+* [![Rider][https://img.shields.io/badge/RIDER-%20-orange]][]
+* [![Github][https://img.shields.io/badge/GITHUB-%20-green]][]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,6 +92,7 @@ I used this applications/frameworks while making the game
 ## A* PathFinding
 
 A* Pathfinding is an algorithm used to efficiently find a path from a starting point to a goal in a graph or a grid. It works by continuously evaluating the estimated cost to reach the goal from each possible next step and choosing the path with the lowest estimated cost until the goal is reached.
+
 ![Animation6](https://user-images.githubusercontent.com/76211809/209404291-aa88aa04-769a-4c9e-837f-64ccd64158d6.gif)
 
 
