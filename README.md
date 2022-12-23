@@ -96,8 +96,7 @@ A* Pathfinding is an algorithm used to efficiently find a path from a starting p
 
 
 ## Draw Call
-![Animation2](https://user-images.githubusercontent.com/76211809/209405097-4cd5f4f9-dc03-4d04-bad5-50749c642bdd.gif)
-
+![Animation2](https://user-images.githubusercontent.com/76211809/209405207-12730213-09bc-4552-98e9-d7b9d0444e5e.gif)
 
 ## DESIGN
 *Polymorphism
