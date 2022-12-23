@@ -60,7 +60,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 
 This game demo is a reference project.
 
@@ -68,7 +68,7 @@ This game demo is a reference project.
 
 
 
-### Built With
+# Built With
 
 I used this applications/frameworks while making the game
 
@@ -78,7 +78,7 @@ I used this applications/frameworks while making the game
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### In-Game Images
+# In-Game Images
 
 ![Animation2](https://user-images.githubusercontent.com/76211809/209403826-8f1589e6-a14d-4eec-b321-b3b2201f290d.gif)
 ![Animation3](https://user-images.githubusercontent.com/76211809/209403876-835cf0f0-f80d-4ad5-afe7-35979bb0643d.gif)
@@ -87,7 +87,7 @@ I used this applications/frameworks while making the game
 
 
 <!-- GETTING STARTED -->
-### In-game Algorithms
+# In-game Algorithms
 
 ## A* PathFinding
 
@@ -99,13 +99,13 @@ A* Pathfinding is an algorithm used to efficiently find a path from a starting p
 ![Animation2](https://user-images.githubusercontent.com/76211809/209405207-12730213-09bc-4552-98e9-d7b9d0444e5e.gif)
 
 ## DESIGN
-# Polymorphism
-# Inheritance
-# S-O-L-I-D
-# Factory
-# Singleton
-# Publish And Subscribe
-# MVC (MVVM)
+### Polymorphism
+### Inheritance
+### S-O-L-I-D
+### Factory
+### Singleton
+### Publish And Subscribe
+### MVC (MVVM)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
