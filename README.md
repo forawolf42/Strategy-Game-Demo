@@ -99,13 +99,13 @@ A* Pathfinding is an algorithm used to efficiently find a path from a starting p
 ![Animation2](https://user-images.githubusercontent.com/76211809/209405207-12730213-09bc-4552-98e9-d7b9d0444e5e.gif)
 
 ## DESIGN
-*Polymorphism
-*Inheritance
-*S-O-L-I-D
-*Factory
-*Singleton
-*Publish And Subscribe
-*MVC (MVVM)
+# Polymorphism
+# Inheritance
+# S-O-L-I-D
+# Factory
+# Singleton
+# Publish And Subscribe
+# MVC (MVVM)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
