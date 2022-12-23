@@ -59,7 +59,7 @@
     <li>
       <a href="#in-game-algorithms">In-game Algorithms</a>
     </li>
-    <li><a href="#draw-wall">Drawcall</a></li>
+    <li><a href="#draw-call">Draw-call</a></li>
     <li><a href="#design">Design</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
