@@ -34,10 +34,10 @@
    a strategy game demo!
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Download playable demo»</strong></a>
+    <a href="https://github.com/forawolf42/Strategy-Game-Demo/releases/tag/Publish"><strong>Download playable demo»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Download source codes</a>
+    <a href="https://github.com/forawolf42/Strategy-Game-Demo/releases/tag/Publish">Download source codes</a>
   </p>
 </div>
 
@@ -88,7 +88,8 @@ I used this applications/frameworks while making the game
 
 # In-Game Images
 
-<img src="https://user-images.githubusercontent.com/76211809/209403826-8f1589e6-a14d-4eec-b321-b3b2201f290d.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209403876-835cf0f0-f80d-4ad5-afe7-35979bb0643d.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209404020-8e1fb426-8aed-4d3b-9daa-780337763f2b.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209404064-687a19e3-ec84-4981-b075-705721b8d02b.gif" width="45%"></img> 
+<img src="https://user-images.githubusercontent.com/76211809/209449831-23840cce-f3ce-46a5-9bd7-3f0591703bfd.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449832-5eaa5ead-2f80-41a8-bdb1-f6d2f68f7510.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449829-80710c3e-b243-4c09-ac56-09774d5be037.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449833-6fed5ca2-65cc-440b-b8d6-fd653d7b75c0.gif" width="45%"></img> 
+
 
 <!-- GETTING STARTED -->
 # In-game Algorithms
@@ -97,11 +98,12 @@ I used this applications/frameworks while making the game
 
 A* Pathfinding is an algorithm used to efficiently find a path from a starting point to a goal in a graph or a grid. It works by continuously evaluating the estimated cost to reach the goal from each possible next step and choosing the path with the lowest estimated cost until the goal is reached.
 
-![Animation6](https://user-images.githubusercontent.com/76211809/209404291-aa88aa04-769a-4c9e-837f-64ccd64158d6.gif)
+<img src="https://user-images.githubusercontent.com/76211809/209449863-2a857ced-d8aa-4ee6-b5d3-36805e14f02a.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449864-277f7eba-bcf9-4a7b-9865-14cee0e2118e.gif" width="45%"></img> 
 
 
 ## Draw Call
-![Animation2](https://user-images.githubusercontent.com/76211809/209405207-12730213-09bc-4552-98e9-d7b9d0444e5e.gif)
+
+![a3](https://user-images.githubusercontent.com/76211809/209449914-7eaf6faa-065d-4947-91b8-610b557d02e6.gif)
 
 ## DESIGN
 ### Polymorphism
