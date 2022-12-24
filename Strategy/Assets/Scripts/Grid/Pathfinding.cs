@@ -9,11 +9,6 @@ public class Pathfinding : MonoBehaviour
     public static Pathfinding Instance;
     private Grid _grid;
 
-    void Awake()
-    {
-        _grid = GetComponent<Grid>();
-    }
-
     private void OnEnable()
     {
         if (Instance == null)
@@ -22,11 +17,18 @@ public class Pathfinding : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        _grid = GetComponent<Grid>(); 
+    }
+
+    /// <summary>
+    /// Takes the selected production object to the target position in the shortest way.
+    /// </summary>
     public void FollowThePath()
     {
         StartCoroutine(FollowThePathEnum());
     }
-
     IEnumerator FollowThePathEnum()
     {
         var targetTransform = target;
@@ -35,19 +37,23 @@ public class Pathfinding : MonoBehaviour
                      new Vector3(targetTransform.position.x + 1, targetTransform.position.y,
                          targetTransform.position.z)))
         {
-            var currentPos = currentNote.worldPosition;
+            var currentPos = currentNote.WorldPosition;
             currentPos.z = -1;
-            currentPos.x -= -.5f;
+            currentPos.x -= -.5f; // to center the cell
             currentPos.y -= -.5f;
 
-            for (int i = 0; i < 10; i++)
+            while (productionPos.position != currentPos)
             {
-                productionPos.position = Vector3.Lerp(productionPos.position, currentPos, 1f / 10f * i);
-                yield return new WaitForSeconds(Time.fixedDeltaTime);
+                // smooth transform
+                productionPos.position = Vector3.MoveTowards(productionPos.position, currentPos, 5 * Time.deltaTime);
+                yield return null;
             }
         }
     }
 
+    /// <summary>
+    /// Returns the shortest path from the start position to the target position.
+    /// </summary>
     List<Node> FindPath(Vector3 startPos, Vector3 targetPos)
     {
         List<Node> pathNodes = new List<Node>();
@@ -66,7 +72,7 @@ public class Pathfinding : MonoBehaviour
             {
                 if (openSet[i].fCost < node.fCost || openSet[i].fCost == node.fCost)
                 {
-                    if (openSet[i].hCost < node.hCost)
+                    if (openSet[i].HCost < node.HCost)
                         node = openSet[i];
                 }
             }
@@ -85,12 +91,12 @@ public class Pathfinding : MonoBehaviour
                     continue;
                 }
 
-                int newCostToNeighbour = node.gCost + GetDistance(node, neighbour);
-                if (newCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
+                int newCostToNeighbour = node.GCost + GetDistance(node, neighbour);
+                if (newCostToNeighbour < neighbour.GCost || !openSet.Contains(neighbour))
                 {
-                    neighbour.gCost = newCostToNeighbour;
-                    neighbour.hCost = GetDistance(neighbour, targetNode);
-                    neighbour.parent = node;
+                    neighbour.GCost = newCostToNeighbour;
+                    neighbour.HCost = GetDistance(neighbour, targetNode);
+                    neighbour.Parent = node;
 
                     if (!openSet.Contains(neighbour))
                         openSet.Add(neighbour);
@@ -101,6 +107,9 @@ public class Pathfinding : MonoBehaviour
         return pathNodes;
     }
 
+    /// <summary>
+    ///  Returns the list of nodes of the route, following the path between the given start and destination nodes.
+    /// </summary>
     List<Node> RetracePath(Node startNode, Node endNode)
     {
         List<Node> path = new List<Node>();
@@ -109,15 +118,18 @@ public class Pathfinding : MonoBehaviour
         while (currentNode != startNode)
         {
             path.Add(currentNode);
-            currentNode = currentNode.parent;
+            currentNode = currentNode.Parent;
         }
 
         path.Reverse();
-
         _grid.Path = path;
         return path;
     }
 
+
+    /// <summary>
+    ///   Returns the distance based on the nodeA and nodeB values of the two nodes.
+    /// </summary>
     int GetDistance(Node nodeA, Node nodeB)
     {
         int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 397622195725493478}
   - component: {fileID: 6675586116104805101}
   - component: {fileID: 2843570586380021257}
-  - component: {fileID: -3182244441968638168}
+  - component: {fileID: 7602663726692124341}
   m_Layer: 0
   m_Name: DefenceTower
   m_TagString: Untagged
@@ -81,7 +81,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-3182244441968638168
+--- !u!114 &7602663726692124341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,13 +90,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 397622195725493499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7aafd18fee52b41a82e8ea5e383c5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 81a375ae1738b284abd02eb335c2f0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 26694584080651417}
-  title: Soldier Tower
-  subTitle: Soldier tower attacks enemies
-  isHaveProduction: 0
+  title: Archer Tower
+  subTitle: Archer tower attacks enemies
+  isHaveProduction: 1
+  Archer: {fileID: 7343909060810572774, guid: faa67b3555cbbf14eb67b9268b53efd9, type: 3}
+  _productionTitle: Archer
+  _productionSubTitle: Archer fights with enemies
+  _productionSprite: {fileID: 21300000, guid: a68a3080516179645992ba41c3325342, type: 3}
 --- !u!1 &3746202467417835639
 GameObject:
   m_ObjectHideFlags: 0

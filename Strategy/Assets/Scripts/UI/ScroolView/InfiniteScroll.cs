@@ -6,47 +6,47 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 {
     [SerializeField] private ScrollContent scrollContent;
     [SerializeField] private float outOfBoundsThreshold;
-    private ScrollRect scrollRect;
-    private Vector2 lastDragPosition;
-    private bool positiveDrag;
+    private ScrollRect _scrollRect;
+    private Vector2 _lastDragPosition;
+    private bool _positiveDrag;
 
     private void Start()
     {
         outOfBoundsThreshold = Screen.height/2;
-        scrollRect = GetComponent<ScrollRect>();
-        scrollRect.vertical = scrollContent.Vertical;
-        scrollRect.horizontal = scrollContent.Horizontal;
-        scrollRect.movementType = ScrollRect.MovementType.Unrestricted;
+        _scrollRect = GetComponent<ScrollRect>();
+        _scrollRect.vertical = scrollContent.Vertical;
+        _scrollRect.horizontal = scrollContent.Horizontal;
+        _scrollRect.movementType = ScrollRect.MovementType.Unrestricted;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        lastDragPosition = eventData.position;
+        _lastDragPosition = eventData.position;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (scrollContent.Vertical)
         {
-            positiveDrag = eventData.position.y > lastDragPosition.y;
+            _positiveDrag = eventData.position.y > _lastDragPosition.y;
         }
         else if (scrollContent.Horizontal)
         {
-            positiveDrag = eventData.position.x > lastDragPosition.x;
+            _positiveDrag = eventData.position.x > _lastDragPosition.x;
         }
 
-        lastDragPosition = eventData.position;
+        _lastDragPosition = eventData.position;
     }
 
     public void OnScroll(PointerEventData eventData)
     {
         if (scrollContent.Vertical)
         {
-            positiveDrag = eventData.scrollDelta.y > 0;
+            _positiveDrag = eventData.scrollDelta.y > 0;
         }
         else
         {
-            positiveDrag = eventData.scrollDelta.y < 0;
+            _positiveDrag = eventData.scrollDelta.y < 0;
         }
     }
 
@@ -64,21 +64,21 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 
     private void HandleVerticalScroll()
     {
-        int currItemIndex = positiveDrag ? scrollRect.content.childCount - 1 : 0;
-        var currItem = scrollRect.content.GetChild(currItemIndex);
+        int currItemIndex = _positiveDrag ? _scrollRect.content.childCount - 1 : 0;
+        var currItem = _scrollRect.content.GetChild(currItemIndex);
 
         if (!ReachedThreshold(currItem))
         {
             return;
         }
 
-        int endItemIndex = positiveDrag ? 0 : scrollRect.content.childCount - 1;
-        Transform endItem = scrollRect.content.GetChild(endItemIndex);
+        int endItemIndex = _positiveDrag ? 0 : _scrollRect.content.childCount - 1;
+        Transform endItem = _scrollRect.content.GetChild(endItemIndex);
         Vector2 newPos = endItem.position;
 
-        if (positiveDrag)
+        if (_positiveDrag)
         {
-            newPos.y = endItem.position.y - Screen.height/5;
+            newPos.y = endItem.position.y - Screen.height/5; 
         }
         else
         {
@@ -91,18 +91,18 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 
     private void HandleHorizontalScroll()
     {
-        int currItemIndex = positiveDrag ? scrollRect.content.childCount - 1 : 0;
-        var currItem = scrollRect.content.GetChild(currItemIndex);
+        int currItemIndex = _positiveDrag ? _scrollRect.content.childCount - 1 : 0;
+        var currItem = _scrollRect.content.GetChild(currItemIndex);
         if (!ReachedThreshold(currItem))
         {
             return;
         }
 
-        int endItemIndex = positiveDrag ? 0 : scrollRect.content.childCount - 1;
-        Transform endItem = scrollRect.content.GetChild(endItemIndex);
+        int endItemIndex = _positiveDrag ? 0 : _scrollRect.content.childCount - 1;
+        Transform endItem = _scrollRect.content.GetChild(endItemIndex);
         Vector2 newPos = endItem.position;
 
-        if (positiveDrag)
+        if (_positiveDrag)
         {
             newPos.x = endItem.position.x - scrollContent.ChildWidth * 1.5f + scrollContent.ItemSpacing;
         }
@@ -121,7 +121,7 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
         {
             float posYThreshold = transform.position.y + scrollContent.Height * 0.5f + outOfBoundsThreshold;
             float negYThreshold = transform.position.y - scrollContent.Height * 0.5f - outOfBoundsThreshold;
-            return positiveDrag
+            return _positiveDrag
                 ? item.position.y - scrollContent.ChildWidth * 0.5f > posYThreshold
                 : item.position.y + scrollContent.ChildWidth * 0.5f < negYThreshold;
         }
@@ -130,7 +130,7 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
         {
             float posXThreshold = transform.position.x + scrollContent.Width * 0.5f + outOfBoundsThreshold;
             float negXThreshold = transform.position.x - scrollContent.Width * 0.5f - outOfBoundsThreshold;
-            return positiveDrag
+            return _positiveDrag
                 ? item.position.x - scrollContent.ChildWidth * 0.5f > posXThreshold
                 : item.position.x + scrollContent.ChildWidth * 0.5f < negXThreshold;
         }

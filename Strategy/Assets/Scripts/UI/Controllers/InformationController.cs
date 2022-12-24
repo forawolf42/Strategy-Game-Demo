@@ -3,24 +3,29 @@ using UnityEngine;
 
 public class InformationController : MonoBehaviour
 {
-    public static InformationController instance=null;
-    [SerializeField] private InformationView _informationView;
-    [SerializeField] private ProductionView _productionView;
+    public static InformationController Instance=null;
+    [SerializeField] private InformationView informationView;
+    [SerializeField] private ProductionView productionView;
     private void OnEnable()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             return;
         }
-        instance = this;
+        Instance = this;
     }
-
+    /// <summary>
+    /// Updates Information Panel Data.
+    /// </summary>
     public void UpdateInformationView(string title,string subtitle,Sprite sprite)
     {
-        _informationView.UpdateInformationView(title,subtitle,sprite);
+        informationView.UpdateInformationView(title,subtitle,sprite);
     }
+    /// <summary>
+    /// Updates Production Panel Data.
+    /// </summary>
     public void UpdateProduction(bool IsHaveProduction,string title = null, string subtitle=null, Sprite sprite=null, Production production=null)
     {
-        _productionView.UpdateProduction(IsHaveProduction,title,subtitle,sprite,production);
+        productionView.UpdateProduction(IsHaveProduction,title,subtitle,sprite,production);
     }
 }

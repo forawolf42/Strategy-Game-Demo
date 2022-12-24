@@ -20,23 +20,28 @@ public class Grid : MonoBehaviour
         CreateGrid();
     }
 
+    /// <summary>
+    /// This function is used to create a grid.
+    /// </summary>
     void CreateGrid()
     {
         _grid = new Node[_gridSizeX, _gridSizeY];
         CheckWalkable();
         var isOffset = true;
-
         foreach (Node n in _grid)
         {
-            var spawnedTile = Instantiate(tileprefab, n.worldPosition, Quaternion.identity);
-            spawnedTile.name = $"Tile {n.worldPosition.x} {n.worldPosition.y}";
+            var spawnedTile = Instantiate(tileprefab, n.WorldPosition, Quaternion.identity);
+            spawnedTile.name = $"Tile {n.WorldPosition.x} {n.WorldPosition.y}";
             spawnedTile.transform.parent = transform;
             spawnedTile.transform.localScale = Vector3.one * (_nodeDiameter);
-            isOffset = !isOffset;
+            isOffset = !isOffset; // to create colored tiles
             spawnedTile.Init(isOffset);
         }
     }
 
+    /// <summary>
+    /// Update if nodes can walkable or not .
+    /// </summary>
     void CheckWalkable()
     {
         Vector3 worldBottomLeft =
@@ -53,6 +58,10 @@ public class Grid : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    ///  Returns a list of nodes around the given node.
+    /// </summary>
     public List<Node> GetNeighbours(Node node)
     {
         List<Node> neighbours = new List<Node>();
@@ -63,7 +72,6 @@ public class Grid : MonoBehaviour
             {
                 if (x == 0 && y == 0)
                     continue;
-
                 int checkX = node.gridX + x;
                 int checkY = node.gridY + y;
 
@@ -93,23 +101,22 @@ public class Grid : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, gridWorldSize.y, 0));
-
         if (_grid != null)
         {
             foreach (Node n in _grid)
             {
                 if (!n.walkable)
                 {
-                    Gizmos.color = Color.red;
-                    Gizmos.DrawCube(n.worldPosition, Vector3.one * (_nodeDiameter - .1f));
+                    Gizmos.color = Color.red; // red if not walkable
+                    Gizmos.DrawCube(n.WorldPosition, Vector3.one * (_nodeDiameter - .1f));
                 }
 
                 if (Path != null)
                 {
                     if (Path.Contains(n))
                     {
-                        Gizmos.color = Color.black;
-                        Gizmos.DrawCube(n.worldPosition, Vector3.one * (_nodeDiameter - .1f));
+                        Gizmos.color = Color.black; // black for the path
+                        Gizmos.DrawCube(n.WorldPosition, Vector3.one * (_nodeDiameter - .1f));
                     }
                 }
             }

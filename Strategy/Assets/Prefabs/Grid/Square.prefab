@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 397622195725493478}
   - component: {fileID: 397622195725493497}
   - component: {fileID: 397622195725493496}
-  - component: {fileID: 6675586116104805101}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -96,33 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce140d50fb2bfa4c9020b0dbdcf6478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _basecolor: {r: 1, g: 0.91469854, b: 0.5424528, a: 1}
-  _offsetcolor: {r: 0.745283, g: 0.6707177, b: 0.41834283, a: 1}
+  _basecolor: {r: 1, g: 0.7104885, b: 0.28235292, a: 1}
+  _offsetcolor: {r: 0.74509805, g: 0.51565915, b: 0.18823527, a: 1}
   _renderer: {fileID: 397622195725493497}
   _highlight: {fileID: 0}
---- !u!61 &6675586116104805101
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397622195725493499}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0

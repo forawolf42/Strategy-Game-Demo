@@ -1,7 +1,7 @@
 using UnityEngine;
-public class Barrack : Building
+public class DefenceTower : Building
 {
-    [SerializeField] private Production Soldier;
+    [SerializeField] private Production Archer;
     [SerializeField] private string _productionTitle;
     [SerializeField] private string _productionSubTitle;
     [SerializeField] protected Sprite _productionSprite = null;
@@ -13,10 +13,10 @@ public class Barrack : Building
     {
         var position = transform.position;
         position.x += 2;
-        Soldier.birthVector = position;
-        Soldier.productionSprite = _productionSprite;
-        Soldier.title = _productionTitle;
-        Soldier.subTitle = _productionSubTitle;
+        Archer.birthVector = position;
+        Archer.productionSprite = _productionSprite;
+        Archer.title = _productionTitle;
+        Archer.subTitle = _productionSubTitle;
     }
     public override void OnDragEnd()
     {
@@ -28,7 +28,7 @@ public class Barrack : Building
     {
         InformationController.Instance.UpdateInformationView(title, subTitle, BuilgingSprite);
         InformationController.Instance.UpdateProduction(isHaveProduction, _productionTitle, _productionSubTitle,
-            _productionSprite, Soldier);
+            _productionSprite, Archer);
         SetProductionData();
     }
 }

@@ -4,36 +4,32 @@ using UnityEngine.UI;
 
 public class ProductionView : MonoBehaviour
 {
-    [SerializeField] private GameObject _panel;
+    [SerializeField] private GameObject panel;
     [SerializeField] private Image _renderer;
-    [SerializeField] private TMP_Text _title;
-    [SerializeField] private TMP_Text _subTitle;
+    [SerializeField] private TMP_Text title;
+    [SerializeField] private TMP_Text subTitle;
     private Production _selectedProduction = null;
-    
-    public void UpdateProduction(bool IsHaveProduction,string title,string subtitle,Sprite sprite,Production production)
+    public void UpdateProduction(bool isHaveProduction,string _title,string _subtitle,Sprite sprite,Production production)
     {
-        if (!IsHaveProduction)
+        if (!isHaveProduction)
         {
-            _panel.SetActive(false);
+            // close panel if no production
+            panel.SetActive(false);
             return;
         }
-        _panel.SetActive(true);
-
-        _title.SetText(title);
-        _subTitle.SetText(subtitle);
+        panel.SetActive(true);
+        title.SetText(_title);
+        subTitle.SetText(_subtitle);
         _renderer.sprite = sprite;
         _selectedProduction = production;
     }
-    
-
-
     public void SpawnProduction()
     {
         if (_selectedProduction==null)
         {
             return;
         }
-
+        // spawn production
         Instantiate(_selectedProduction, _selectedProduction.birthVector, Quaternion.identity);
     }
 }

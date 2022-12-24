@@ -16,14 +16,13 @@ public class Building : MonoBehaviour
     }
     public virtual void OnMouseUp()
     {
-        InformationController.instance.UpdateInformationView(title, subTitle, BuilgingSprite);
-        InformationController.instance.UpdateProduction(false);
+        InformationController.Instance.UpdateInformationView(title, subTitle, BuilgingSprite);
+        InformationController.Instance.UpdateProduction(false);
     }
     public  void OnDragStarted()
     {
         OnMouseUp();
     }
-
     public  void OnDragging()
     {
         _dragging = true;
@@ -31,7 +30,7 @@ public class Building : MonoBehaviour
         {
             return;
         }
-        _renderer.color = new Color(255, 255, 255, 0.5f);
+        _renderer.color = new Color(255, 255, 255, 0.5f); // to make it semi-transparent
     }
     public virtual void OnDragEnd()
     {
@@ -53,7 +52,7 @@ public class Building : MonoBehaviour
         {
             return;
         }
-        _renderer.color = new Color(255, 0, 0, 0.5f);
+        _renderer.color = new Color(255, 0, 0, 0.5f); // to make it red if not suitable
         _isDanger = true;
     }
     private void OnTriggerExit2D(Collider2D other)
