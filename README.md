@@ -34,10 +34,10 @@
    a strategy game demo!
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Download playable demo»</strong></a>
+    <a href="https://github.com/forawolf42/Strategy-Game-Demo/releases/tag/Publish"><strong>Download playable demo»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Download source codes</a>
+    <a href="https://github.com/forawolf42/Strategy-Game-Demo/releases/tag/Publish">Download source codes</a>
   </p>
 </div>
 
