@@ -22,39 +22,11 @@ public class Pathfinding : MonoBehaviour
         _grid = GetComponent<Grid>(); 
     }
 
-    /// <summary>
-    /// Takes the selected production object to the target position in the shortest way.
-    /// </summary>
-    public void FollowThePath()
-    {
-        StartCoroutine(FollowThePathEnum());
-    }
-    IEnumerator FollowThePathEnum()
-    {
-        var targetTransform = target;
-        var productionPos = production;
-        foreach (var currentNote in FindPath(productionPos.position,
-                     new Vector3(targetTransform.position.x + 1, targetTransform.position.y,
-                         targetTransform.position.z)))
-        {
-            var currentPos = currentNote.WorldPosition;
-            currentPos.z = -1;
-            currentPos.x -= -.5f; // to center the cell
-            currentPos.y -= -.5f;
-
-            while (productionPos.position != currentPos)
-            {
-                // smooth transform
-                productionPos.position = Vector3.MoveTowards(productionPos.position, currentPos, 5 * Time.deltaTime);
-                yield return null;
-            }
-        }
-    }
 
     /// <summary>
     /// Returns the shortest path from the start position to the target position.
     /// </summary>
-    List<Node> FindPath(Vector3 startPos, Vector3 targetPos)
+    public List<Node> FindPath(Vector3 startPos, Vector3 targetPos)
     {
         List<Node> pathNodes = new List<Node>();
 
