@@ -37,6 +37,10 @@
     <a href="https://github.com/forawolf42/Strategy-Game-Demo/releases/tag/Publish"><strong>Download playable demo»</strong></a>
     <br />
     <br />
+      <a href="https://forawolf42.github.io/Strategy-Game-Webgl/"><strong>Play WebGL playable demo»</strong></a>
+        <br />
+    <br />
+    
     <a href="https://github.com/forawolf42/Strategy-Game-Demo/releases/tag/Publish">Download source codes</a>
   </p>
 </div>
