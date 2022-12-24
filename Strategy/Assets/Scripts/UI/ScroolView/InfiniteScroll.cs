@@ -12,7 +12,6 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 
     private void Start()
     {
-        outOfBoundsThreshold = Screen.height/2;
         _scrollRect = GetComponent<ScrollRect>();
         _scrollRect.vertical = scrollContent.Vertical;
         _scrollRect.horizontal = scrollContent.Horizontal;
@@ -40,6 +39,8 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 
     public void OnScroll(PointerEventData eventData)
     {
+        outOfBoundsThreshold = Screen.height/2;
+
         if (scrollContent.Vertical)
         {
             _positiveDrag = eventData.scrollDelta.y > 0;
