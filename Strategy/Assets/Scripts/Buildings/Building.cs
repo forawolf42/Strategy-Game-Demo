@@ -4,25 +4,21 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer = null;
-    [SerializeField] protected Sprite _productionSprite = null;
     [SerializeField] protected string title;
     [SerializeField] protected string subTitle;
-    [SerializeField] protected bool IsHaveProduction = false;
-    protected Sprite _builgingSprite = null;
+    [SerializeField] protected bool isHaveProduction = false;
+    protected Sprite BuilgingSprite = null;
     private bool _dragging;
     private bool _isDanger;
-
     private void OnEnable()
     {
-        _builgingSprite = _renderer.sprite;
+        BuilgingSprite = _renderer.sprite;
     }
-
     public virtual void OnMouseUp()
     {
-        InformationController.instance.UpdateInformationView(title, subTitle, _builgingSprite);
+        InformationController.instance.UpdateInformationView(title, subTitle, BuilgingSprite);
         InformationController.instance.UpdateProduction(false);
     }
-
     public  void OnDragStarted()
     {
         OnMouseUp();
@@ -35,10 +31,8 @@ public class Building : MonoBehaviour
         {
             return;
         }
-
         _renderer.color = new Color(255, 255, 255, 0.5f);
     }
-
     public virtual void OnDragEnd()
     {
         _renderer.color = new Color(255, 255, 255, 1f);
@@ -59,11 +53,9 @@ public class Building : MonoBehaviour
         {
             return;
         }
-
         _renderer.color = new Color(255, 0, 0, 0.5f);
         _isDanger = true;
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         _isDanger = false;

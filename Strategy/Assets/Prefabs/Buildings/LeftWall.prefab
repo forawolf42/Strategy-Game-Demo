@@ -90,14 +90,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 397622195725493499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2012824f4ebd9b948a1c2b86212c94e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b7aafd18fee52b41a82e8ea5e383c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 8115957565105098925}
-  _productionSprite: {fileID: 0}
-  title: Left Wall
+  title: Vertical Wall
   subTitle: 
-  IsHaveProduction: 0
+  isHaveProduction: 0
 --- !u!1 &4259973493278013462
 GameObject:
   m_ObjectHideFlags: 0

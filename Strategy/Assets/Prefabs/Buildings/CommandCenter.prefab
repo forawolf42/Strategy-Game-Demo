@@ -90,14 +90,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 397622195725493499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90042f33fc4588d45abde00120a61e95, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b7aafd18fee52b41a82e8ea5e383c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 7595109816829346347}
-  _productionSprite: {fileID: 0}
   title: Command Center
-  subTitle: Command Center is the center of the base.
-  IsHaveProduction: 0
+  subTitle: Command center is the center of the base
+  isHaveProduction: 0
 --- !u!1 &3551233785759968641
 GameObject:
   m_ObjectHideFlags: 0

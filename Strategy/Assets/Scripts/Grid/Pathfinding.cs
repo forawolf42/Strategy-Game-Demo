@@ -1,46 +1,48 @@
-using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Pathfinding : MonoBehaviour
 {
-    public Transform seeker, target;
-    public static Pathfinding instance;
-    Grid grid;
-
-    private void OnEnable()
-    {
-        if (instance ==null)
-        {
-            instance = this;
-        }
-    }
+    [HideInInspector] public Transform production;
+    [HideInInspector] public Transform target;
+    public static Pathfinding Instance;
+    private Grid _grid;
 
     void Awake()
     {
-        grid = GetComponent<Grid>();
+        _grid = GetComponent<Grid>();
     }
 
-    public void GoThePosition()
+    private void OnEnable()
     {
-        StartCoroutine(GoThePositionenum());
-    }
-
-    IEnumerator GoThePositionenum()
-    {
-        var targetPos = target;
-        var seekerPos = seeker;
-        foreach (var VARIABLE in FindPath(seekerPos.position,new Vector3( targetPos.position.x+1, targetPos.position.y ,targetPos.position.z)))
+        if (Instance == null)
         {
-            var obj = VARIABLE.worldPosition;
-            obj.z = -1;
-            obj.x -= -.5f;
-            obj.y -= -.5f;
+            Instance = this;
+        }
+    }
+
+    public void FollowThePath()
+    {
+        StartCoroutine(FollowThePathEnum());
+    }
+
+    IEnumerator FollowThePathEnum()
+    {
+        var targetTransform = target;
+        var productionPos = production;
+        foreach (var currentNote in FindPath(productionPos.position,
+                     new Vector3(targetTransform.position.x + 1, targetTransform.position.y,
+                         targetTransform.position.z)))
+        {
+            var currentPos = currentNote.worldPosition;
+            currentPos.z = -1;
+            currentPos.x -= -.5f;
+            currentPos.y -= -.5f;
 
             for (int i = 0; i < 10; i++)
             {
-                seekerPos.position = Vector3.Lerp(seekerPos.position, obj, 1f / 10f * i);
+                productionPos.position = Vector3.Lerp(productionPos.position, currentPos, 1f / 10f * i);
                 yield return new WaitForSeconds(Time.fixedDeltaTime);
             }
         }
@@ -48,11 +50,10 @@ public class Pathfinding : MonoBehaviour
 
     List<Node> FindPath(Vector3 startPos, Vector3 targetPos)
     {
-        List<Node> Nodes = new List<Node>();
+        List<Node> pathNodes = new List<Node>();
 
-        
-        Node startNode = grid.NodeFromWorldPoint(startPos);
-        Node targetNode = grid.NodeFromWorldPoint(targetPos);
+        Node startNode = _grid.NodeFromWorldPoint(startPos);
+        Node targetNode = _grid.NodeFromWorldPoint(targetPos);
 
         List<Node> openSet = new List<Node>();
         HashSet<Node> closedSet = new HashSet<Node>();
@@ -74,10 +75,10 @@ public class Pathfinding : MonoBehaviour
             closedSet.Add(node);
             if (node == targetNode)
             {
-                Nodes = RetracePath(startNode, targetNode);
+                pathNodes = RetracePath(startNode, targetNode);
             }
 
-            foreach (Node neighbour in grid.GetNeighbours(node))
+            foreach (Node neighbour in _grid.GetNeighbours(node))
             {
                 if (!neighbour.walkable || closedSet.Contains(neighbour))
                 {
@@ -96,11 +97,10 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
-        return Nodes;
 
+        return pathNodes;
     }
 
-    private List<Node> Nodes;
     List<Node> RetracePath(Node startNode, Node endNode)
     {
         List<Node> path = new List<Node>();
@@ -114,9 +114,8 @@ public class Pathfinding : MonoBehaviour
 
         path.Reverse();
 
-        grid.path = path;
+        _grid.Path = path;
         return path;
-        Nodes = path;
     }
 
     int GetDistance(Node nodeA, Node nodeB)

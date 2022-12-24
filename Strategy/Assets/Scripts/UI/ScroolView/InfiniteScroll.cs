@@ -12,6 +12,7 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 
     private void Start()
     {
+        outOfBoundsThreshold = Screen.height/2;
         scrollRect = GetComponent<ScrollRect>();
         scrollRect.vertical = scrollContent.Vertical;
         scrollRect.horizontal = scrollContent.Horizontal;
@@ -77,11 +78,11 @@ public class InfiniteScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IS
 
         if (positiveDrag)
         {
-            newPos.y = endItem.position.y - 150;
+            newPos.y = endItem.position.y - Screen.height/5;
         }
         else
         {
-            newPos.y = endItem.position.y + 150;
+            newPos.y = endItem.position.y + Screen.height/5;
         }
 
         currItem.position = newPos;

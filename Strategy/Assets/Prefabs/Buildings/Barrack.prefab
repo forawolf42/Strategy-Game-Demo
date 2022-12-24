@@ -95,10 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 2318710024100949251}
-  _productionSprite: {fileID: 21300000, guid: 18a5df26507d95b49a99f31534e6628f, type: 3}
   title: Barracks
   subTitle: This building produces soldiers
-  IsHaveProduction: 1
+  isHaveProduction: 1
   Soldier: {fileID: -6991309111042452961, guid: 87c405ab7b5141445beac46a8488d0a9, type: 3}
   _productionTitle: Soldier
   _productionSubTitle: Soldier fights with enemies
