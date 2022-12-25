@@ -94,8 +94,7 @@ I used this applications/frameworks while making the game
 
 # In-Game Images
 
-<img src="https://user-images.githubusercontent.com/76211809/209449831-23840cce-f3ce-46a5-9bd7-3f0591703bfd.gif" width="45%">
-</img> <img src="https://user-images.githubusercontent.com/76211809/209466035-91641d36-5065-4ecf-80fb-287c5244726a.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449829-80710c3e-b243-4c09-ac56-09774d5be037.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449833-6fed5ca2-65cc-440b-b8d6-fd653d7b75c0.gif" width="45%"></img> 
+<img src="https://user-images.githubusercontent.com/76211809/209449831-23840cce-f3ce-46a5-9bd7-3f0591703bfd.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209466035-91641d36-5065-4ecf-80fb-287c5244726a.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449829-80710c3e-b243-4c09-ac56-09774d5be037.gif" width="45%"></img> <img src="https://user-images.githubusercontent.com/76211809/209449833-6fed5ca2-65cc-440b-b8d6-fd653d7b75c0.gif" width="45%"></img> 
 
 
 <!-- GETTING STARTED -->
